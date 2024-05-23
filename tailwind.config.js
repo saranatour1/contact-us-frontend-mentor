@@ -64,16 +64,9 @@ export default {
           lineHeight:"1.5rem",
           fontWeight: 400,
         },
-        "label":{},
-        "input":{},
-        "radio":{},
-        "check-box":{},
-        "btn":{},
-        "error-label":{},
-        "error-input":{},
-
-        "toast-success":{},
-        "toast-error":{},
+        ".btn-hover":{
+          background:"linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), #0C7D69"
+        }
       })
     }),
   ],

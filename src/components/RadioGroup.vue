@@ -3,13 +3,13 @@ import { provide } from 'vue';
 
 defineProps()
 
-const modelValue = defineModel<number>()
+const modelValue = defineModel<string>()
 
 provide('radio', modelValue)
 </script>
 
 <template>
-    <fieldset>
-      <slot />
-    </fieldset>
+  <fieldset>
+    <slot />
+  </fieldset>
 </template>

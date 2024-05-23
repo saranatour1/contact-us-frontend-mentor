@@ -10,8 +10,6 @@
   },
   "dependencies": {
     "@fontsource-variable/karla": "^5.0.21",
-    "@vee-validate/yup": "^4.12.8",
-    "vee-validate": "3",
     "vue": "^3.4.21"
   },
   "devDependencies": {

@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import { computed, inject, ref } from 'vue';
+import RadioIcon from './RadioIcon.vue';
 
 const props = defineProps<{
-  value?: number  
+  value?: string
 }>();
 
-const checked = inject('radio', ref<number>())
-const isDisabled = inject('isDisabled', ref(false))
+const checked = inject('radio', ref<string>())
 
 const isSelected = computed(() => {
   return checked.value === props.value
@@ -15,8 +15,11 @@ const isSelected = computed(() => {
 
 </script>
 <template>
-  <label class="w-full h-full rounded-[.3125rem] cursor-pointer bg-[#00474B] text-center p-[.3rem] text-white text-[1.5rem] font-spaceMono font-bold transition-colors" :class="{ '!bg-[#26C2AE] !text-[#00474B]': !isDisabled && isSelected }">
-    <input class="sr-only" type="radio" :value="props.value" v-model="checked"> 
+  <label
+    class="w-full h-full cursor-pointer p-l py-s flex items-center justify-start border border-grey-100 rounded-lg bg-white gap-x-s transition-colors body-medium-regular"
+    :class="{ ' !bg-green-100 border-green-200': isSelected }">
+    <input class="sr-only" type="radio" :value="props.value" v-model="checked">
+    <RadioIcon :isSelected="isSelected" />
     <slot />
   </label>
 </template>
